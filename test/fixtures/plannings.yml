@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  class: MyString
+  date: 2023-07-18
+  revenue: 1.5
+
+two:
+  description: MyText
+  class: MyString
+  date: 2023-07-18
+  revenue: 1.5

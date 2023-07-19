@@ -29,6 +29,8 @@ gem "sassc-rails"
 
 gem "image_processing", "~> 1.2"
 
+gem "devise", "~> 4.9"
+
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
@@ -42,3 +44,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
