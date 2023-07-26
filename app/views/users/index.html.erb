@@ -11,4 +11,14 @@
   <% end %>
 </div>
 
+<div>
+  <%= @users.count %>
+</div>
+
+
+<%= form_with url: import_users_url, method: :post do |form| %>
+  <%= form.file_field :file, accept: ".csv" %>
+  <%= form.button "Import" %>
+<% end %>
+
 <%= link_to "New user", new_user_path %>

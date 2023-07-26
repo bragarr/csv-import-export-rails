@@ -2,6 +2,8 @@ require_relative "boot"
 
 require "rails/all"
 
+require "csv"
+
 require "dotenv"
 
 Dotenv.load(".env")

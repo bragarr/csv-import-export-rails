@@ -6,6 +6,15 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def import
+    file = params[:file]
+    return redirect_to users_path, notice: "Ony CSV" unless file.content_type == "text/csv"
+
+    CsvImportUsersService.new.call(file)
+    
+    redirect_to users_path, notice: "Imported"
+  end
+
   # GET /users/1 or /users/1.json
   def show
   end
