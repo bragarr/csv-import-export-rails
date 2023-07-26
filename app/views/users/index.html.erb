@@ -2,14 +2,9 @@
 
 <h1>Users</h1>
 
+<%#= link_to "Download", users_path(format: :csv), download: ["Users", Date.today].join(" ") %>
+<%= link_to "Download", users_path(format: :csv) %>
 <div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
-</div>
 
 <div>
   <%= @users.count %>
@@ -21,4 +16,13 @@
   <%= form.button "Import" %>
 <% end %>
 
+
 <%= link_to "New user", new_user_path %>
+
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", user %>
+    </p>
+  <% end %>
+</div>
